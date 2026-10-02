@@ -1,0 +1,2243 @@
+```css
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  background: #f4eee8;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* =====================================================
+   HOME PAGE
+===================================================== */
+
+.home-page {
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(48, 35, 29, 0.48),
+      rgba(48, 35, 29, 0.62)
+    ),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2200&q=90");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* =====================================================
+   SOFT BACKGROUND GLOW
+===================================================== */
+
+.home-page::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  filter: blur(100px);
+
+  top: -180px;
+  left: -180px;
+
+  pointer-events: none;
+}
+
+.home-page::after {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  background: rgba(232, 195, 171, 0.08);
+
+  filter: blur(100px);
+
+  right: -150px;
+  bottom: -150px;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   WEDDING CARD
+===================================================== */
+
+.wedding-card {
+  width: 100%;
+  max-width: 650px;
+
+  height: min(720px, calc(100svh - 40px));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 2;
+
+  padding: 60px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 252, 248, 0.98),
+      rgba(247, 237, 228, 0.96)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.30),
+    0 10px 30px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(12px);
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   INNER CARD BORDER
+===================================================== */
+
+.wedding-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+
+  border: 1px solid rgba(151, 112, 91, 0.38);
+
+  pointer-events: none;
+}
+
+.wedding-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 27px;
+  left: 27px;
+  right: 27px;
+  bottom: 27px;
+
+  border: 1px solid rgba(151, 112, 91, 0.12);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.card-content {
+  width: 100%;
+
+  position: relative;
+  z-index: 3;
+
+  text-align: center;
+
+  color: #49372f;
+}
+
+
+/* =====================================================
+   SMALL TOP TEXT
+===================================================== */
+
+.home-small-text {
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #92715e;
+
+  margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
+
+.home-title {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(55px, 8vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: 1px;
+
+  color: #46342c;
+
+  margin: 0 0 25px;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.home-divider {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin: 0 auto 27px;
+}
+
+.home-divider span {
+  width: 85px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      #a98570
+    );
+}
+
+.home-divider span:last-child {
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      #a98570
+    );
+}
+
+.home-divider b {
+  font-family: Georgia, serif;
+
+  font-size: 19px;
+
+  font-weight: 400;
+
+  color: #a47760;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   WELCOME MESSAGE
+===================================================== */
+
+.home-welcome {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  font-weight: 400;
+
+  color: #735b4e;
+
+  margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   COUPLE NAME
+===================================================== */
+
+.couple-name {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(38px, 6vw, 58px);
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  color: #46342c;
+
+  margin: 12px 0 28px;
+}
+
+.couple-name span {
+  font-size: 0.62em;
+
+  font-style: italic;
+
+  color: #aa8069;
+
+  margin: 0 10px;
+}
+
+
+/* =====================================================
+   WEDDING DATE
+===================================================== */
+
+.wedding-date {
+  margin-bottom: 30px;
+}
+
+.wedding-date p {
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #92715e;
+
+  margin-bottom: 8px;
+}
+
+.wedding-date strong {
+  display: block;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 19px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  color: #513d33;
+}
+
+
+/* =====================================================
+   VIEW INVITATION BUTTON
+===================================================== */
+
+.invitation-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 190px;
+
+  padding: 14px 30px;
+
+  border: 1px solid #765646;
+
+  background: #765646;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 2.5px;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.invitation-btn:hover {
+  background: transparent;
+
+  color: #765646;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(90, 61, 47, 0.15);
+}
+
+
+/* =====================================================
+   INVITATION PAGE
+===================================================== */
+
+.invitation-page {
+  width: 100%;
+
+  height: 100vh;
+  height: 100svh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      rgba(48, 35, 29, 0.55),
+      rgba(48, 35, 29, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2200&q=90");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =====================================================
+   INVITATION CONTENT
+===================================================== */
+
+.invitation-content {
+  width: min(90%, 650px);
+
+  padding: 70px 50px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 252, 248, 0.98),
+      rgba(247, 237, 228, 0.96)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.3);
+
+  color: #46342c;
+}
+
+.invitation-content h1 {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(42px, 7vw, 65px);
+
+  font-weight: 400;
+
+  margin-bottom: 15px;
+}
+
+.invitation-content p {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  line-height: 1.6;
+
+  color: #735b4e;
+
+  margin-bottom: 30px;
+}
+
+.back-home-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 28px;
+
+  background: #765646;
+
+  border: 1px solid #765646;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  transition: all 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background: transparent;
+
+  color: #765646;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   4 PAGE WEDDING BOOK
+===================================================== */
+.wedding-book {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding: 40px 20px 100px;
+
+  background:
+    linear-gradient(
+      rgba(48, 35, 29, 0.58),
+      rgba(48, 35, 29, 0.68)
+    ),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2200&q=90");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* =====================================================
+   A4 PAGE
+===================================================== */
+
+.a4-page {
+  height: min(88svh, 1050px);
+
+  width: min(
+    calc(min(88svh, 1050px) * 0.70707),
+    calc(100vw - 80px)
+  );
+
+  min-width: 280px;
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf9,
+      #f7eee5
+    );
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35);
+
+  animation: pageFade 0.6s ease;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   PAGE ANIMATION
+===================================================== */
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.96)
+      translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+
+/* =====================================================
+   PAGE BORDER
+===================================================== */
+
+.page-border {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+
+  border:
+    1px solid
+    rgba(151, 112, 91, 0.4);
+
+  padding: 42px;
+}
+
+.page-border::after {
+  content: "";
+
+  position: absolute;
+
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+
+  border:
+    1px solid
+    rgba(151, 112, 91, 0.14);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   PAGE CONTENT
+===================================================== */
+
+.page-content {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #49372f;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   BISMILLAH
+===================================================== */
+
+.page-bismillah {
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  color: #765646;
+
+  margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   SMALL HEADING
+===================================================== */
+
+.page-small-heading {
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #92715e;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   PAGE LINE
+===================================================== */
+
+.page-line {
+  width: 80px;
+
+  height: 1px;
+
+  background: #a98570;
+
+  margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   GREETING PAGE
+===================================================== */
+
+.greeting-title {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 52px;
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  color: #46342c;
+
+  margin-bottom: 28px;
+}
+
+.greeting-text {
+  width: 100%;
+
+  max-width: 390px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #735b4e;
+
+  margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   ORNAMENT
+===================================================== */
+
+.ornament {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 18px 0;
+}
+
+.ornament span {
+  width: 60px;
+
+  height: 1px;
+
+  background: #a98570;
+}
+
+.ornament b {
+  color: #a47760;
+
+  font-size: 17px;
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-style: italic;
+
+  color: #513d33;
+
+  margin-top: 20px;
+}
+
+.quran-reference {
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: #92715e;
+
+  margin-top: 8px;
+}
+
+
+/* =====================================================
+   PAGE FOOTER
+===================================================== */
+
+.page-footer-text {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  color: #92715e;
+}
+
+
+/* =====================================================
+   PAGE 2 TITLES
+===================================================== */
+
+.celebration-title,
+.details-title {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 52px;
+
+  font-weight: 400;
+
+  color: #46342c;
+
+  line-height: 1;
+
+  margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   PAGE INTRO
+===================================================== */
+
+.page-intro {
+  width: 100%;
+
+  max-width: 370px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  color: #735b4e;
+
+  margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   COUPLE
+===================================================== */
+
+.couple-section {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin: 5px 0 20px;
+}
+
+.bride-name,
+.groom-name {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  color: #46342c;
+
+  line-height: 0.9;
+
+  margin: 5px 0;
+}
+
+.and-text {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-style: italic;
+
+  color: #a47760;
+
+  margin: 6px 0;
+}
+
+
+/* =====================================================
+   DATE BOX
+===================================================== */
+
+.date-box {
+  border-top:
+    1px solid
+    rgba(151, 112, 91, 0.35);
+
+  border-bottom:
+    1px solid
+    rgba(151, 112, 91, 0.35);
+
+  padding: 18px 45px;
+
+  margin-top: 10px;
+}
+
+.date-label {
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  color: #92715e;
+
+  margin-bottom: 8px;
+}
+
+.date-box h3 {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  color: #513d33;
+
+  margin-bottom: 4px;
+}
+
+.date-box p:last-child {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 17px;
+
+  color: #735b4e;
+}
+
+
+/* =====================================================
+   PAGE 3 DETAILS
+===================================================== */
+
+.detail-item {
+  width: 100%;
+
+  max-width: 380px;
+
+  text-align: center;
+
+  margin: 10px 0;
+}
+
+.detail-icon {
+  display: block;
+
+  font-size: 20px;
+
+  color: #a47760;
+
+  margin-bottom: 3px;
+}
+
+.detail-heading {
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #92715e;
+
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 23px;
+
+  color: #513d33;
+
+  margin-bottom: 1px;
+}
+
+.detail-sub {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 15px;
+
+  color: #735b4e;
+}
+
+
+/* =====================================================
+   PAGE SPACER
+===================================================== */
+
+.page-spacer {
+  height: 35px;
+}
+
+
+/* =====================================================
+   PAGE 4
+===================================================== */
+
+.final-title {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 55px;
+
+  font-weight: 400;
+
+  color: #46342c;
+
+  line-height: 1;
+
+  margin-bottom: 15px;
+}
+
+.final-message {
+  width: 100%;
+
+  max-width: 390px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #735b4e;
+
+  margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   FINAL NAMES
+===================================================== */
+
+.final-names {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 18px 0;
+}
+
+.final-names h2 {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 40px;
+
+  font-weight: 400;
+
+  color: #46342c;
+}
+
+.final-names span {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 25px;
+
+  font-style: italic;
+
+  color: #a47760;
+}
+
+.thank-you {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 34px;
+
+  font-style: italic;
+
+  color: #765646;
+
+  margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   HOME BUTTON
+===================================================== */
+
+.home-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 25px;
+
+  padding: 11px 24px;
+
+  background: #765646;
+
+  border: 1px solid #765646;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  transition: all 0.3s ease;
+}
+
+.home-button:hover {
+  background: transparent;
+
+  color: #765646;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
+.page-navigation {
+  position: absolute;
+
+  bottom: 18px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  z-index: 20;
+}
+
+.page-number {
+  min-width: 55px;
+
+  text-align: center;
+
+  padding: 8px 12px;
+
+  background:
+    rgba(255, 252, 248, 0.92);
+
+  color: #765646;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+.page-nav-btn {
+  width: 38px;
+
+  height: 38px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.7);
+
+  background:
+    rgba(118, 86, 70, 0.92);
+
+  color: white;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  transition: all 0.3s ease;
+}
+
+.page-nav-btn:hover {
+  background: #513d33;
+
+  transform: scale(1.05);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .home-page {
+    padding: 18px;
+
+    background-attachment: scroll;
+  }
+
+  .wedding-card {
+    max-width: 580px;
+
+    height:
+      min(
+        670px,
+        calc(100svh - 36px)
+      );
+
+    padding: 50px 45px;
+  }
+
+  .wedding-card::before {
+    top: 17px;
+    left: 17px;
+    right: 17px;
+    bottom: 17px;
+  }
+
+  .wedding-card::after {
+    top: 23px;
+    left: 23px;
+    right: 23px;
+    bottom: 23px;
+  }
+
+  .home-small-text {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 22px;
+  }
+
+  .home-title {
+    font-size: 62px;
+
+    margin-bottom: 22px;
+  }
+
+  .home-welcome {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+  }
+
+  .couple-name {
+    font-size: 46px;
+
+    margin-bottom: 25px;
+  }
+
+  .wedding-date {
+    margin-bottom: 25px;
+  }
+
+  .home-divider span {
+    width: 65px;
+  }
+
+
+  /* 4 PAGE BOOK */
+
+  .a4-page {
+    height: min(86svh, 900px);
+
+    width: min(
+      calc(min(86svh, 900px) * 0.70707),
+      calc(100vw - 50px)
+    );
+  }
+
+  .page-border {
+    padding: 32px;
+  }
+
+  .greeting-title {
+    font-size: 45px;
+  }
+
+  .celebration-title,
+  .details-title {
+    font-size: 47px;
+  }
+
+  .bride-name,
+  .groom-name {
+    font-size: 52px;
+  }
+
+  .final-title {
+    font-size: 49px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .home-page {
+    width: 100%;
+
+    height: 100svh;
+
+    padding: 12px;
+
+    background-position: center;
+
+    overflow: hidden;
+  }
+
+  .wedding-card {
+    width: 100%;
+
+    height:
+      calc(100svh - 24px);
+
+    min-height: 0;
+
+    padding: 35px 22px;
+
+    border-radius: 2px;
+  }
+
+  .wedding-card::before {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .wedding-card::after {
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .home-small-text {
+    font-size: 7px;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 18px;
+  }
+
+  .home-title {
+    font-size: 46px;
+
+    line-height: 0.95;
+
+    margin-bottom: 20px;
+  }
+
+  .home-divider {
+    gap: 10px;
+
+    margin-bottom: 20px;
+  }
+
+  .home-divider span {
+    width: 42px;
+  }
+
+  .home-divider b {
+    font-size: 16px;
+  }
+
+  .home-welcome {
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    margin-bottom: 18px;
+  }
+
+  .couple-name {
+    font-size: 36px;
+
+    margin-top: 8px;
+
+    margin-bottom: 24px;
+  }
+
+  .couple-name span {
+    margin: 0 6px;
+  }
+
+  .wedding-date {
+    margin-bottom: 24px;
+  }
+
+  .wedding-date p {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 6px;
+  }
+
+  .wedding-date strong {
+    font-size: 15px;
+
+    letter-spacing: 2px;
+  }
+
+  .invitation-btn {
+    min-width: 165px;
+
+    padding: 12px 20px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  /* INVITATION */
+
+  .invitation-page {
+    padding: 12px;
+  }
+
+  .invitation-content {
+    width: calc(100% - 10px);
+
+    padding: 45px 25px;
+  }
+
+  .invitation-content h1 {
+    font-size: 42px;
+  }
+
+  .invitation-content p {
+    font-size: 18px;
+
+    line-height: 1.5;
+  }
+
+
+  /* WEDDING BOOK */
+
+  .wedding-book {
+    width: 100%;
+
+    height: 100svh;
+
+    padding: 0 8px;
+  }
+
+  .a4-page {
+    width: calc(100vw - 24px);
+
+    height: calc(100svh - 82px);
+
+    max-height: none;
+
+    min-width: 0;
+
+    aspect-ratio: auto;
+  }
+
+  .page-border {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    padding: 20px;
+  }
+
+  .page-border::after {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .page-bismillah {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+  }
+
+  .page-small-heading {
+    font-size: 6px;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 14px;
+  }
+
+  .page-line {
+    width: 55px;
+
+    margin-bottom: 20px;
+  }
+
+  .greeting-title {
+    font-size: 38px;
+
+    margin-bottom: 20px;
+  }
+
+  .greeting-text {
+    max-width: 280px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+  }
+
+  .ornament {
+    gap: 8px;
+
+    margin: 12px 0;
+  }
+
+  .ornament span {
+    width: 40px;
+  }
+
+  .ornament b {
+    font-size: 14px;
+  }
+
+  .quote {
+    font-size: 19px;
+
+    margin-top: 14px;
+  }
+
+  .quran-reference {
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .celebration-title,
+  .details-title {
+    font-size: 40px;
+
+    margin-bottom: 8px;
+  }
+
+  .page-intro {
+    max-width: 280px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+  }
+
+  .bride-name,
+  .groom-name {
+    font-size: 47px;
+  }
+
+  .and-text {
+    font-size: 19px;
+
+    margin: 5px 0;
+  }
+
+  .date-box {
+    padding: 14px 25px;
+
+    margin-top: 5px;
+  }
+
+  .date-label {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+  }
+
+  .date-box h3 {
+    font-size: 23px;
+  }
+
+  .date-box p:last-child {
+    font-size: 15px;
+  }
+
+  .detail-item {
+    margin: 7px 0;
+  }
+
+  .detail-icon {
+    font-size: 17px;
+
+    margin-bottom: 2px;
+  }
+
+  .detail-heading {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+  .detail-value {
+    font-size: 20px;
+  }
+
+  .detail-sub {
+    font-size: 14px;
+  }
+
+  .page-spacer {
+    height: 20px;
+  }
+
+  .final-title {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+  }
+
+  .final-message {
+    max-width: 280px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+  }
+
+  .final-names {
+    gap: 8px;
+
+    margin: 12px 0;
+  }
+
+  .final-names h2 {
+    font-size: 34px;
+  }
+
+  .final-names span {
+    font-size: 21px;
+  }
+
+  .thank-you {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+  }
+
+  .page-footer-text {
+    font-size: 13px;
+  }
+
+  .home-button {
+    margin-top: 16px;
+
+    padding: 10px 20px;
+
+    font-size: 7px;
+  }
+
+  .page-navigation {
+    bottom: 8px;
+
+    gap: 10px;
+  }
+
+  .page-nav-btn {
+    width: 32px;
+
+    height: 32px;
+
+    font-size: 14px;
+  }
+
+  .page-number {
+    min-width: 48px;
+
+    padding: 7px 10px;
+
+    font-size: 8px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .home-page {
+    padding: 8px;
+  }
+
+  .wedding-card {
+    height:
+      calc(100svh - 16px);
+
+    padding: 28px 18px;
+  }
+
+  .wedding-card::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .wedding-card::after {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .home-small-text {
+    font-size: 6px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+  }
+
+  .home-title {
+    font-size: 40px;
+
+    margin-bottom: 17px;
+  }
+
+  .home-divider {
+    margin-bottom: 17px;
+  }
+
+  .home-divider span {
+    width: 32px;
+  }
+
+  .home-welcome {
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    margin-bottom: 15px;
+  }
+
+  .couple-name {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+  }
+
+  .wedding-date {
+    margin-bottom: 20px;
+  }
+
+  .wedding-date strong {
+    font-size: 14px;
+  }
+
+  .invitation-btn {
+    min-width: 150px;
+
+    padding: 11px 17px;
+  }
+
+
+  /* WEDDING BOOK */
+
+  .a4-page {
+    width: calc(100vw - 16px);
+
+    height: calc(100svh - 70px);
+  }
+
+  .page-border {
+    padding: 15px;
+  }
+
+  .greeting-title {
+    font-size: 32px;
+  }
+
+  .greeting-text {
+    max-width: 245px;
+
+    font-size: 13px;
+  }
+
+  .celebration-title,
+  .details-title {
+    font-size: 34px;
+  }
+
+  .bride-name,
+  .groom-name {
+    font-size: 40px;
+  }
+
+  .date-box {
+    padding: 12px 18px;
+  }
+
+  .date-box h3 {
+    font-size: 20px;
+  }
+
+  .detail-value {
+    font-size: 18px;
+  }
+
+  .detail-sub {
+    font-size: 13px;
+  }
+
+  .final-title {
+    font-size: 36px;
+  }
+
+  .final-message {
+    max-width: 240px;
+
+    font-size: 13px;
+  }
+
+  .final-names h2 {
+    font-size: 29px;
+  }
+
+  .thank-you {
+    font-size: 27px;
+  }
+}
+
+
+/* =====================================================
+   LANDSCAPE MOBILE
+===================================================== */
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+  .home-page {
+    padding: 10px;
+
+    background-attachment: scroll;
+  }
+
+  .wedding-card {
+    height: calc(100svh - 20px);
+
+    max-width: 700px;
+
+    padding: 20px 40px;
+  }
+
+  .home-small-text {
+    margin-bottom: 10px;
+  }
+
+  .home-title {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+  }
+
+  .home-divider {
+    margin-bottom: 12px;
+  }
+
+  .home-welcome {
+    font-size: 13px;
+
+    line-height: 1.35;
+
+    margin-bottom: 10px;
+  }
+
+  .couple-name {
+    font-size: 32px;
+
+    margin: 5px 0 12px;
+  }
+
+  .wedding-date {
+    margin-bottom: 12px;
+  }
+
+  .wedding-date p {
+    margin-bottom: 4px;
+  }
+
+  .invitation-btn {
+    padding: 10px 22px;
+  }
+
+
+  /* WEDDING BOOK */
+
+  .wedding-book {
+    padding: 8px;
+  }
+
+  .a4-page {
+    height: calc(100svh - 55px);
+
+    width: calc(
+      (100svh - 55px) * 0.70707
+    );
+  }
+
+  .page-border {
+    padding: 18px;
+  }
+
+  .page-bismillah {
+    font-size: 16px;
+
+    margin-bottom: 5px;
+  }
+
+  .page-small-heading {
+    font-size: 5px;
+
+    margin-bottom: 8px;
+  }
+
+  .greeting-title {
+    font-size: 27px;
+
+    margin-bottom: 10px;
+  }
+
+  .greeting-text {
+    max-width: 300px;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+    margin-bottom: 6px;
+  }
+
+  .ornament {
+    margin: 7px 0;
+  }
+
+  .quote {
+    font-size: 15px;
+
+    margin-top: 7px;
+  }
+
+  .quran-reference {
+    font-size: 6px;
+  }
+
+  .celebration-title,
+  .details-title {
+    font-size: 32px;
+  }
+
+  .page-intro {
+    font-size: 12px;
+
+    max-width: 300px;
+  }
+
+  .bride-name,
+  .groom-name {
+    font-size: 38px;
+  }
+
+  .date-box {
+    padding: 8px 25px;
+  }
+
+  .date-box h3 {
+    font-size: 18px;
+  }
+
+  .date-box p:last-child {
+    font-size: 12px;
+  }
+
+  .detail-item {
+    margin: 4px 0;
+  }
+
+  .detail-icon {
+    font-size: 14px;
+  }
+
+  .detail-heading {
+    font-size: 6px;
+  }
+
+  .detail-value {
+    font-size: 17px;
+  }
+
+  .detail-sub {
+    font-size: 11px;
+  }
+
+  .final-title {
+    font-size: 34px;
+  }
+
+  .final-message {
+    max-width: 300px;
+
+    font-size: 11px;
+
+    line-height: 1.35;
+
+    margin-bottom: 7px;
+  }
+
+  .final-names {
+    margin: 7px 0;
+  }
+
+  .final-names h2 {
+    font-size: 27px;
+  }
+
+  .thank-you {
+    font-size: 23px;
+  }
+
+  .home-button {
+    margin-top: 8px;
+
+    padding: 7px 15px;
+  }
+
+  .page-navigation {
+    bottom: 5px;
+
+    gap: 7px;
+  }
+
+  .page-nav-btn {
+    width: 27px;
+
+    height: 27px;
+
+    font-size: 12px;
+  }
+
+  .page-number {
+    min-width: 40px;
+
+    padding: 5px 7px;
+
+    font-size: 6px;
+  }
+}
+
+
+/* =====================================================
+   ACCESSIBILITY / BUTTON RESET
+===================================================== */
+
+button {
+  font-family: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #a47760;
+
+  outline-offset: 3px;
+}
+
+
+/* =====================================================
+   SELECTION
+===================================================== */
+
+::selection {
+  background: #765646;
+
+  color: #ffffff;
+}
+
